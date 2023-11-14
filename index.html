@@ -3,47 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Reservation System</title>
+    <title>GKT - Restaurant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <!-- Navigation Bar -->
-        <nav id="navbar">
-			<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-				≡
-			</a>
-			<a href="index.html">Home</a>
-			<a href="reservation.html">Make a Reservation</a>
-			<a href="admin.html">Admin Panel</a>
-		</nav>
-    </header>
+	<!--navbar code here-->
+    <nav id="navbar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
+        <a href="index.html">Home</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="admin.html">Login</a>
+    </nav>
 
-    <section class="hero">
-        <!-- Hero Image with Overlay Text -->
-        <h1>Welcome to Our Restaurant</h1>
-    </section>
-
-    <section class="about">
-        <!-- About the Restaurant -->
-        <h2>About Us</h2>
-        <p>Some information about the restaurant...</p>
-    </section>
-
-    <section class="gallery">
-        <!-- Image Gallery -->
-        <h2>Our Gallery</h2>
-    </section>
-
-    <section class="testimonials">
-        <!-- Testimonials -->
-        <h2>Testimonials</h2>
-    </section>
-
-    <footer>
-        <!-- Footer Content -->
-        <p>Contact info, social media links, etc.</p>
-    </footer>
+	<!--hero section-->
+	<section class="hero">
+		<div class="hero-overlay"></div> <!-- Overlay div -->
+		<div class="hero-content">
+			<h1>Welcome to Our Restaurant</h1>
+			<p>Experience the taste of luxury.</p>
+			<a href="reservation.html" class="btn">Make a Reservation</a>
+		</div>
+	</section>
 
     <script src="js/script.js"></script>
 </body>
