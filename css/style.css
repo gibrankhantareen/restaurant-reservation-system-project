@@ -14,21 +14,23 @@ body {
 nav {
     background-color: #333;
     overflow: hidden;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align nav items to the start */
+    align-items: center; /* Center items vertically */
+    height: 50px; /* Adjust height as needed */
 }
 
 /* Style for nav links */
 nav a {
-    float: left;
-    display: block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    float: none; /* Remove float as we are using flexbox */
 }
 
 /* Style for the menu icon */
 nav .icon {
-    display: none;
+    display: none; /* Hidden on desktop */
 }
 
 /* Hover effect for nav links */
@@ -37,21 +39,17 @@ nav a:hover {
     color: black;
 }
 
-/* Icon styling (always visible on mobile) */
-.icon {
-    display: none; /* Hidden on desktop */
-    color: white; /* This should contrast with the background */
-}
-
-/* Style changes for small screens */
+/* Mobile styles */
 @media screen and (max-width: 600px) {
+    /* Change the justify-content to space-between to space out the logo and the menu icon */
+    nav {
+        justify-content: space-between; /* This will push the menu icon to the right */
+    }
+
     /* Show the menu icon */
-    .icon {
+    nav .icon {
         display: block;
-        position: absolute;
-        right: 10px; /* Adjust if necessary for alignment */
-        top: 10px; /* Adjust if necessary for alignment */
-        font-size: 30px;
+        order: 1; /* Make sure the menu icon is at the end */
     }
 
     /* Hide the navigation links initially */
@@ -59,17 +57,10 @@ nav a:hover {
         display: none;
     }
 
-    /* Ensure the icon is always visible without hover */
-    nav a.icon {
-        display: block;
-    }
-
     /* Responsive class toggled via JavaScript */
     nav.responsive a {
-        float: none;
         display: block;
+        width: 100%; /* Full width for mobile nav items */
         text-align: left;
-        width: 100%; /* Ensure full width for better alignment */
-        padding: 14px; /* Adjust padding as needed for better spacing */
     }
 }
