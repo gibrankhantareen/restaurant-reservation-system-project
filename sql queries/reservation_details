@@ -1,0 +1,12 @@
+CREATE TABLE `gkt_restaurant`.`reservation_details` (
+    `invoice_id` VARCHAR(6) NOT NULL,
+    `booking_status` BOOLEAN NOT NULL DEFAULT FALSE,
+    `date_of_event` DATE NOT NULL,
+    `date_booked_on` DATE NULL,
+    `booked_table_id` INT(3) NOT NULL,
+    `quantity` INT(5) NOT NULL,
+    `booked_by_user` INT(5) NOT NULL,
+    PRIMARY KEY (`invoice_id`, `booked_table_id`, `booked_by_user`),
+    FOREIGN KEY (`booked_by_user`) REFERENCES `user`(`user_id`),
+    FOREIGN KEY (`booked_table_id`) REFERENCES `restaurant_tables`(`table_id`)
+) ENGINE = InnoDB;

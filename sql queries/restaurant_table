@@ -1,0 +1,8 @@
+CREATE TABLE `gkt_restaurant`.`restaurant_tables` (
+    `table_id` INT(3) NOT NULL,
+    `availability` BOOLEAN NOT NULL,
+    `max_guests` INT NOT NULL,
+    `reserved_under` INT(5),
+    PRIMARY KEY (`table_id`),
+    FOREIGN KEY (`reserved_under`) REFERENCES `user`(`user_id`)
+) ENGINE = InnoDB;

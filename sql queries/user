@@ -1,0 +1,8 @@
+CREATE TABLE `gkt_restaurant`.`user` (
+	`userid` INT(5) NOT NULL ,
+	`name` VARCHAR(30) NOT NULL ,
+	`ph_number` VARCHAR(10) NOT NULL ,
+	`reservation_made` BOOLEAN NOT NULL DEFAULT FALSE ,
+	PRIMARY KEY (`userid`),
+	UNIQUE (`ph_number`)
+) ENGINE = InnoDB;
