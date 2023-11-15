@@ -2,5 +2,5 @@ CREATE TABLE `gkt_restaurant`.`guests` (
     guest_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
-    phone_number VARCHAR(15) NOT NULL
+    phone_number VARCHAR(15) NOT NULL UNIQUE
 );
