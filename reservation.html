@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make a Reservation</title>
+<link rel="stylesheet" href="./css/res-style.css">
 </head>
 <body>
-    <header>
-        <!-- Navigation menu and other header content -->
-    </header>
+	<!--navbar code here-->
+	<nav id="navbar">
+		<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
+		<a href="index.html">Home</a>
+		<a href="reservation.html">Reservation</a>
+		<a href="admin.html">Login</a>
+	</nav>
 
-    <main>
-        <!-- Main content of your page (different for each HTML file) -->
-    </main>
+	<!--hero-section here-->
+	<section class="hero-section">
+		<h1>Welcome to Our Restaurant</h1>
+		<p>Reserve a table with us!</p>
+	</section>
 
-    <footer>
-        <!-- Footer content -->
-    </footer>
+	<!-- Reservation Form -->
+	<section class="form-section">
+		<div class="reservation-form">
+			<h2>Please Enter Your Details</h2>
+			<form action="book_reservation.php" method="post">
+				<input type="text" id="name" name="name" placeholder="Your Name" required>
+				<input type="email" id="email" name="email" placeholder="Email" required>
+				<input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+				<input type="date" name="date" id="date" placeholder="Event Date" required>
+				<input type="time" name="time" id="time" placeholder="Event Time" required>
+				<input type="number" name="guests" id="guests" placeholder="Number of Guests" required>
+				<input type="number" name="tables" id="tables" placeholder="Number of Tables. Note: 1 Table = 2 Guests" oninput="calculateAmountDue()" required>
+				<input type="text" name="amount_due" id="amount_due" placeholder="Amount Due (Rs)" readonly>
+				<button type="submit" name="submit">Book Reservation</button>
+			</form>
+		</div>
+	</section>
 
-    <script src="script.js"></script>
+	<script src="./js/res-script.js"></script>
 </body>
 </html>
