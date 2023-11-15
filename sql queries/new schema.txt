@@ -1,0 +1,21 @@
++------------------+     +---------------------+
+|     guests       |     |    reservations     |
++------------------+     +---------------------+
+| guest_id (PK)    |<---<| reservation_id (PK) |
+| name             |     | guest_id (FK)       |
+| email            |     | num_guests          |
+| phone_number     |     | reservation_date    |
++------------------+     | num_tables          |
+                         | amount_due          |
+                         | booking_id          |
+                         +---------------------+
+
+
+
++------------------+
+|     admin        |
++------------------+
+| admin_id (PK)    |
+| username         |
+| password         |
++------------------+
