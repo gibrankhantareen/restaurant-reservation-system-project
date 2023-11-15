@@ -42,7 +42,7 @@ nav a:hover {
 /* Style for the hero content */
 .hero {
 	position: relative; /* Ensure the parent is positioned */
-    background: url('/img/hero-content-img.jpg') no-repeat center center / cover;
+    background: url('../img/hero-content-img.jpg') no-repeat center center / cover;
     color: white;
     height: 90vh; /* 90% of the viewport height */
     display: flex;
