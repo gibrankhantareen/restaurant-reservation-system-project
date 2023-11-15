@@ -1,0 +1,10 @@
+CREATE TABLE `gkt_restaurant`.`reservations` (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_id INT NOT NULL,
+    num_guests INT NOT NULL,
+    reservation_date DATETIME NOT NULL,
+    num_tables INT NOT NULL,
+    amount_due DECIMAL(10, 2) NOT NULL,
+    booking_id VARCHAR(5) NOT NULL,
+    FOREIGN KEY (guest_id) REFERENCES guests(guest_id)
+);
