@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<link rel="stylesheet" href="./css/ad-login-style.css">
+</head>
+<body>
+	<!--navbar code here-->
+	<nav id="navbar">
+		<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
+		<a href="index.html">Home</a>
+		<a href="reservation.html">Reservation</a>
+		<a href="admin_login.html">Admin</a>
+	</nav>
+
+	<!--login form here-->
+    <div class="login-container">
+		<img src="./img/admin-register.png" alt="Admin Register Image" class="login-image" height="180px" width="180px">
+
+        <form action="admin_register.php" method="post" class="login-form">
+            <h2>Admin Registration</h2>
+			<input type="text" name="admin_name" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

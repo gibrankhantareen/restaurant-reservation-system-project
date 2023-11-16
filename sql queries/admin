@@ -1,7 +1,8 @@
 CREATE TABLE `gkt_restaurant`.`admin` (
     admin_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+	admin_name VARCHAR(55) NOT NULL
 );
 
--- Added new column: ALTER TABLE `admin` ADD COLUMN admin_name VARCHAR(55);
+-- Added new column: ALTER TABLE `admin` ADD COLUMN admin_name VARCHAR(55) NOT NULL;
