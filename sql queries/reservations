@@ -6,5 +6,9 @@ CREATE TABLE `gkt_restaurant`.`reservations` (
     num_tables INT NOT NULL,
     amount_due DECIMAL(10, 2) NOT NULL,
     booking_id VARCHAR(5) NOT NULL,
+	booking_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (guest_id) REFERENCES guests(guest_id)
 );
+
+
+-- Added a new Column:- ALTER TABLE reservations ADD COLUMN booking_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
