@@ -85,6 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->get_result();
         $reservation_details = $result->fetch_assoc();
 
+		echo "<link rel='stylesheet' type='text/css' href='./css/table-styles.css'>";
+
         // Display reservation details
         if ($reservation_details) {
             echo "<p>Dear {$reservation_details['name']}, your booking is confirmed. Check details below.</p>";

@@ -14,6 +14,8 @@ if (isset($_GET['email'])) {
     $stmt->execute();
     $result = $stmt->get_result();
 
+	echo "<link rel='stylesheet' type='text/css' href='./css/table-styles.css'>";
+
     if ($result->num_rows > 0) {
         // Display existing reservations
         echo "<p>Existing reservations for {$email}:</p>";
