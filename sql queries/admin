@@ -3,3 +3,5 @@ CREATE TABLE `gkt_restaurant`.`admin` (
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
+
+-- Added new column: ALTER TABLE `admin` ADD COLUMN admin_name VARCHAR(55);
