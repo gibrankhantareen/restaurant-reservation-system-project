@@ -37,7 +37,7 @@ $reservations_result = $conn->query("SELECT * FROM reservations");
     </div>
 
     <div class="admin-container">
-        <h1 style="text-align: center;">Welcome to Gibran's Restaurant - Admin Panel</h1>
+        <h1 style="text-align: center;">Welcome to Gibran's Delight - Admin Panel</h1>
 
         <h2>Guests</h2>
         <table>
