@@ -27,16 +27,17 @@ $reservations_result = $conn->query("SELECT * FROM reservations");
     <link rel="stylesheet" type="text/css" href="./css/admin_panel.css">
 </head>
 <body>
-    <!-- Admin Navigation Bar -->
-    <div class="admin-nav">
+    <!-- Gibran Restaurant ka Admin Navigation Bar -->
+    <div class="admin-nav" id="admin-nav">
+		<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
         <a href="admin_panel.php">Dashboard</a>
-        <a href="manage_booking.php">Manage Bookings</a>
-        <a href="send_reminders.php">Send Email Reminders</a>
+        <a href="#" onclick="manageBookingAlert()">Manage Bookings</a>
+        <a href="#" onclick="manageBookingAlert()">Send Email Reminders</a>
         <a href="admin_logout.php">Logout</a>
     </div>
 
     <div class="admin-container">
-        <h1>Admin Panel</h1>
+        <h1 style="text-align: center;">Welcome to Gibran's Restaurant - Admin Panel</h1>
 
         <h2>Guests</h2>
         <table>
@@ -77,13 +78,12 @@ $reservations_result = $conn->query("SELECT * FROM reservations");
         </table>
 
         <!-- Management Buttons -->
-        <button onclick="window.location.href='manage_booking.php'">Edit Booking</button>
+        <button onclick="manageBookingAlert()">Edit Booking</button>
         <button onclick="sendEmailReminders()">Send Email Reminders</button>
-        <script>
-            function sendEmailReminders() {
-                alert("Reminder email sent to all guests");
-            }
-        </script>
+
+		<!-- JS script which has the funcs -->
+        <script src="./js/admin_panel.js"></script>
+
         <button onclick="window.location.href='admin_logout.php'">Logout</button>
     </div>
 </body>

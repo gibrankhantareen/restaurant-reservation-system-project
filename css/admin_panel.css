@@ -47,16 +47,23 @@ button:hover {
     background-color: #333;
     overflow: hidden;
     color: white;
-    padding: 10px 0;
+    padding: 13px 0;
+    align-items: center; /* Centers the items vertically */
 }
 
 .admin-nav a {
     float: left;
     color: white;
     text-align: center;
-    padding: 12px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 16px;
+	float: none; /* Removing float as we are using flexbox */
+}
+
+/* Style for the menu icon */
+.admin-nav .icon {
+    display: none; /* Hidden on desktop */
 }
 
 .admin-nav a:hover {
@@ -71,11 +78,28 @@ button:hover {
     clear: both;
 }
 
-/* Responsive layout - makes the navigation bar look good on small screens */
+/* Mobile styles */
 @media screen and (max-width: 600px) {
-    .admin-nav a {
-        float: none;
+    /* Change the justify-content to space-between to space out the logo and the menu icon */
+    .admin-nav {
+        justify-content: space-between; /* This will push the menu icon to the right */
+    }
+
+    /* Show the menu icon */
+    .admin-nav .icon {
         display: block;
+        order: 1; /* Making sure the menu icon is at the end */
+    }
+
+    /* Hide the navigation links initially */
+    .admin-nav a:not(:first-child) {
+        display: none;
+    }
+
+    /* Responsive class toggled via JavaScript */
+    .admin-nav.responsive a {
+        display: block;
+        width: 100%; /* Full width for mobile nav items */
         text-align: left;
     }
 }

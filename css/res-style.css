@@ -16,7 +16,7 @@ nav {
     display: flex; /* Use flexbox for alignment */
     justify-content: flex-start; /* Align nav items to the start */
     align-items: center; /* Center items vertically */
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
 }
 
 /* Style for nav links */
