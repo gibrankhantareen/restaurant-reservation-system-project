@@ -12,7 +12,7 @@
 		<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">≡</a>
 		<a href="index.html">Home</a>
 		<a href="reservation.html">Reservation</a>
-		<a href="admin.html">Login</a>
+		<a href="admin_login.html">Admin</a>
 	</nav>
 
 	<!--hero-section here-->
@@ -25,7 +25,7 @@
 	<section class="form-section">
 		<div class="reservation-form">
 			<h2>Please Enter Your Details</h2>
-			<form action="book_reservation.php" method="post">
+			<form name="reservationForm" action="book_reservation.php" onsubmit="return validateForm()" method="post">
 				<input type="text" id="name" name="name" placeholder="Your Name" required>
 				<input type="email" id="email" name="email" placeholder="Email" required>
 				<input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
