@@ -3,6 +3,8 @@
 
 This recent project of mine is a Restaurant Reservation System, which is a comprehensive platform designed to streamline the process of table booking for customers and management for restaurant administrators. This system provides a user-friendly interface for customers to make online reservations, while offering a robust backend for administrators to manage bookings and customer data.
 
+Live link: http://gkt-testing.42web.io/index.html
+
 ## Features
 For Customers:
 - Table Reservation: Customers can book tables specifying their details, reservation date and time, and the number of guests.
