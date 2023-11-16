@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.admin-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.admin-container {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+.admin-nav {
+    background-color: #333;
+    overflow: hidden;
+    color: white;
+    padding: 10px 0;
+}
+
+.admin-nav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.admin-nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Clear floats after the columns */
+.admin-nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the navigation bar look good on small screens */
+@media screen and (max-width: 600px) {
+    .admin-nav a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
