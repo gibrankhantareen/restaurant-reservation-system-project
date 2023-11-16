@@ -17,7 +17,7 @@ nav {
     display: flex; /* Use flexbox for alignment */
     justify-content: flex-start; /* Align nav items to the start */
     align-items: center; /* Center items vertically */
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
 }
 
 /* Style for nav links */
@@ -41,7 +41,7 @@ nav a:hover {
 
 /* Style for the hero content */
 .hero {
-	position: relative; /* Ensure the parent is positioned */
+	position: relative;
     background: url('../img/hero-content-img.jpg') no-repeat center center / cover;
     color: white;
     height: 90vh; /* 90% of the viewport height */
@@ -59,7 +59,7 @@ nav a:hover {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    z-index: 1; /* Overlay must be above the background image but below the text */
+    z-index: 1; /* To ensure Overlay must be above the background image but below the text */
 }
 
 .hero-content h1 {
@@ -82,7 +82,7 @@ nav a:hover {
 .btn {
 	position: relative; /* Positioned relative to the hero section */
     z-index: 2; /* Ensures text is above the overlay */
-    background-color: #f8b400; /* A bright, attention-grabbing color */
+    background-color: #f8b400;
     color: #fff; /* White text */
     padding: 15px 25px;
     text-decoration: none;
@@ -100,7 +100,7 @@ nav a:hover {
 
 /* Mobile styles */
 @media screen and (max-width: 600px) {
-    /* Change the justify-content to space-between to space out the logo and the menu icon */
+    /* Concept to justify-content is to space-between to space out the logo and the menu icon */
     nav {
         justify-content: space-between; /* This will push the menu icon to the right */
     }
@@ -108,7 +108,7 @@ nav a:hover {
     /* Show the menu icon */
     nav .icon {
         display: block;
-        order: 1; /* Make sure the menu icon is at the end */
+        order: 1; /* Making sure the menu icon is at the end */
     }
 
     /* Hide the navigation links initially */

@@ -23,7 +23,7 @@ function validateForm() {
     var email = document.forms["reservationForm"]["email"].value;
     var phone = document.forms["reservationForm"]["phone"].value;
     var date = document.forms["reservationForm"]["date"].value;
-    var time = document.forms["reservationForm"]["time"].value; // Assuming you have a time input
+    var time = document.forms["reservationForm"]["time"].value;
 
     // Email Validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
