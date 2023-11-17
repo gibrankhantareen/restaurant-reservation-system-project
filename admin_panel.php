@@ -86,5 +86,10 @@ $reservations_result = $conn->query("SELECT * FROM reservations");
 
         <button onclick="window.location.href='admin_logout.php'">Logout</button>
     </div>
+	<!--footer section-->
+	<div class="footer-bar">
+		<img src="./img/logo-footer.png" alt="Logo" class="footer-logo">
+		<p>&copy; 2023 Gibran's Delight. All Rights Reserved.</p>
+	</div>
 </body>
 </html>

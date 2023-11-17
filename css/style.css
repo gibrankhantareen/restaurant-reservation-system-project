@@ -1,16 +1,129 @@
-/* Reset margin and padding */
+/* Base reset for margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
 
-/* Basic styling for the body */
+/* Establish a consistent base font for the body */
 body {
-    font-family: Arial, sans-serif;
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background: #ffffff;
 }
 
-/* Navigation bar styling */
+/* Container to constrain and center content */
+.offer-container {
+	width: 80%;
+	max-width: 1200px;
+	margin: auto;
+	overflow: auto;
+	padding: 2rem;
+}
+
+.offerings h2{
+	text-align: center;
+	font-family: montserrat;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: 700;
+	font-size: 30px;
+
+}
+
+/* Offering section ki subheading */
+.offerings #of1{
+	text-align: center;
+	font-family: poppins;
+	font-size: 16px;
+	color: hsl(0, 0%, 31%);
+}
+
+/* Grid setup for offer cards */
+.offerings-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+	margin-top: 4rem;
+  }
+
+/* Individual offer card styling */
+.offering-item {
+	background: #fbfbfb;
+	border-radius: 10px;
+	padding: 1.5rem;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	margin-bottom: 40px;
+	text-align: center; /* Center the text inside each item */
+
+}
+
+/* Styles for the offering images */
+.offering-image {
+	margin-top: -60px; /* Pulling the image upwards, out of the box */
+	background-color: #ffffff; /* White background around the image */
+	padding: 2px; /* Spacing around the image */
+	border-radius: 50%; /* Circular images */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow around the image */
+	position: relative; /* Needed for z-index */
+	z-index: 2; /* Ensure the image is above the item's background */
+}
+
+
+/* Text styling for Item name*/
+.offering-item h3 {
+	font-size: 1.1rem;
+	margin-bottom: 20px;
+	font-family: montserrat;
+	text-align: center;
+}
+
+/* Text styling for Item description*/
+.offering-item p {
+	font-family: poppins;
+	margin-bottom: 25px;
+	font-size: 15px;
+	color: #333;
+}
+
+
+/* 'Explore More' button styling */
+.offering-link {
+	display: inline-block;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 15px;
+	height: 30px;
+	padding: 3px 17px 17px 17px;
+	text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+	background: linear-gradient(92.88deg, rgb(255, 187, 0) 9.16%, rgba(255, 192, 19, 0.906) 43.89%, rgb(255, 187, 40) 64.72%);
+	transition: all 0.5s ease 0s;
+
+}
+
+
+.offering-link:hover {
+	box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+	transition: all 0.1s ease 0s;
+}
+
+/* Hover effect for offer card */
+.offering-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+
+}
+
+
+/* Navigation bar styling starts */
 nav {
     background-color: #333;
     overflow: hidden;
@@ -98,6 +211,68 @@ nav a:hover {
 }
 
 
+/* footer section styles */
+.site-footer {
+    background-color: #141414;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+	font-family: montserrat;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+	font-family: poppins;
+	font-size: 15px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f8b400;
+}
+
+.footer-logo {
+    width: 210px;
+	height: 70px;
+    margin-bottom: 10px;
+}
+
+/* last ka copyright bar*/
+.footer-bar {
+    text-align: center;
+	background-color: rgb(6, 6, 6);
+    padding: 40px 0;
+}
+
+.footer-bar p{
+    text-align: center;
+	color: white;
+	font-family: montserrat;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+/* footer ends*/
+
+
+
 /* Mobile styles */
 @media screen and (max-width: 600px) {
     /* Concept to justify-content is to space-between to space out the logo and the menu icon */
@@ -121,5 +296,36 @@ nav a:hover {
         display: block;
         width: 100%; /* Full width for mobile nav items */
         text-align: left;
+    }
+
+	.offerings-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.container {
+		width: 90%;
+		padding: 1rem;
+	}
+
+	.site-footer {
+        padding: 30px 10px; /* Reduce padding on very small screens */
+		font-size: 11px;
+    }
+
+    .footer-logo {
+        width: 210px;
+		height: 70px;
+    }
+}
+
+/* Responsive layout - Adjustments for very small screens */
+@media screen and (max-width: 400px) {
+    .site-footer {
+        padding: 30px 10px; /* Reduced padding on very small screens */
+    }
+
+    .footer-logo {
+        width: 210px; /* Further reduced logo size for very small screens */
+		height: 70px;
     }
 }

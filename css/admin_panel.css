@@ -78,6 +78,69 @@ button:hover {
     clear: both;
 }
 
+
+/* footer section styles */
+.site-footer {
+    background-color: #141414;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+	font-family: montserrat;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+	font-family: poppins;
+	font-size: 15px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f8b400;
+}
+
+.footer-logo {
+    width: 210px;
+	height: 70px;
+    margin-bottom: 10px;
+}
+
+/* last ka copyright bar*/
+.footer-bar {
+    text-align: center;
+	background-color: rgb(6, 6, 6);
+    padding: 40px 0;
+}
+
+.footer-bar p{
+    text-align: center;
+	color: white;
+	font-family: montserrat;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+/* footer ends*/
+
+
+
 /* Mobile styles */
 @media screen and (max-width: 600px) {
     /* Change the justify-content to space-between to space out the logo and the menu icon */
@@ -101,5 +164,15 @@ button:hover {
         display: block;
         width: 100%; /* Full width for mobile nav items */
         text-align: left;
+    }
+
+	.site-footer {
+        padding: 30px 10px; /* Reduce padding on very small screens */
+		font-size: 11px;
+    }
+
+    .footer-logo {
+        width: 210px;
+		height: 70px;
     }
 }
